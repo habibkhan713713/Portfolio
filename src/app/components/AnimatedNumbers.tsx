@@ -2,7 +2,7 @@
 import {useMotionValue,useInView,useSpring} from 'framer-motion'
 import { useEffect, useRef } from "react";
 
-export default function Default1({value}:any){
+export default function Default({value}:any){
 const ref:any = useRef(null)
 const motionValue = useMotionValue(0)
 const springValue = useSpring(motionValue,{duration:3000})
