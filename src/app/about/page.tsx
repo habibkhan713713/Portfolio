@@ -6,7 +6,7 @@ import Skills from "../components/Skills";
 import Experience from "../components/Experience";
 import Education from '../components/Education'
 
-const page = () => {
+function Page(){
   return (
     <main className="flex w-full px-32 flex-col mb-32 items-center justify-center">
       <AnimatedText
@@ -84,7 +84,7 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
 
 export const metadata = {
   title: "Habibullah Khan || About Page",

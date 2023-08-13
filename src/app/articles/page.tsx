@@ -6,7 +6,7 @@ import article1 from "../../../public/images/Articles/article1.webp";
 import AnimatedText from "../components/AnimatedText";
 import { motion, useMotionValue } from "framer-motion";
 import { useRef } from "react";
-const page = () => {
+function Page(){
   const FeaturedArticle = ({ para, title, image, link, readtime }: any) => {
     return (
       <>
@@ -121,4 +121,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

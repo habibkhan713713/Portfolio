@@ -5,7 +5,7 @@ import { GithubIcon } from "../components/Icons";
 import Project1 from "../../../public/images/Projects/Project1.webp"
 import Project2 from "../../../public/images/Projects/Project2.webp"
 import Project3 from "../../../public/images/Projects/Project3.webp"
-const page = () => {
+function Page(){
   const FeaturedProject = ({
     type,
     title,
@@ -126,7 +126,7 @@ const Project = ({
   );
 };
 
-export default page;
+export default Page;
 
 export const metadata = {
   title: "Habibullah Khan || Projects",
