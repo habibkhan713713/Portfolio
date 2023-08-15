@@ -1,4 +1,4 @@
-import { Analytics } from '@vercel/analytics/react';
+import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 import Head from "next/head";
 import Script from "next/script";
@@ -24,20 +24,15 @@ export default function RootLayout({
       lang="en"
       className={`${fontMont.variable} ${roboto.variable} ${sanSwah.variable} ${inter.variable}`}
     >
-   
-          <Script id='theme-switcher' strategy='beforeInteractive'>{
-            // On page load or when changing themes, best to add inline in `head` to avoid FOUC
-            `if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      <body className="select-none flex items-center  text-dark w-full min-h-[98vh] dark:!bg-dark  flex-col box-border">
+        <Script id="theme-switcher" strategy="beforeInteractive">{
+          // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+          `if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
   document.documentElement.classList.add('dark')
 } else {
   document.documentElement.classList.remove('dark')}
-  
   `
-          }</Script>
-        
-
-      <body className="select-none flex items-center  text-dark w-full min-h-[98vh] dark:!bg-dark  flex-col box-border">
-        
+        }</Script>
 
         <NavBar className=" grow-0 dark:bg-dark dark:text-light dark"></NavBar>
         <main className={`bg-light w-full grow border-box dark:!bg-dark`}>
