@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react';
 import "./globals.css";
 import Head from "next/head";
 import Script from "next/script";
@@ -43,6 +44,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer className="grow-0 dark:!bg-dark"></Footer>
+        <Analytics />
       </body>
     </html>
   );
