@@ -26,6 +26,14 @@ function Page() {
               className="hover:scale-105 transition-all ease-linear duration-100 w-full h-auto"
               alt={title}
               src={img}
+              priority
+              sizes="
+          (max-width:768px) 100vw,
+          (max-width:1200px) 50vw,
+          50vw
+
+
+          "
             ></Image>
           </Link>
 
@@ -77,6 +85,9 @@ function Page() {
               className="w-full h-auto hover:scale-105 transition-all ease-linear duration-100"
               alt={title}
               src={img}
+              sizes="(max-width:768px) 100vw,
+              (max-width:1200px) 50vw,
+              50vw"
             ></Image>
           </Link>
 

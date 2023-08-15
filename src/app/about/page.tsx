@@ -47,6 +47,14 @@ function Page() {
             className="bg-dark dark:bg-black rounded-2xl"
             alt="Habibullah Khan"
             src={profile}
+            priority
+          sizes="
+          (max-width:768px) 100vw,
+          (max-width:1200px) 50vw,
+          33vw
+
+
+          "
           ></Image>
         </div>
 

@@ -14,6 +14,14 @@ export default function page({ className }: any) {
           alt="profile image"
           className="w-[40%] h-auto"
           src={Profile}
+          priority
+          sizes="
+          (max-width:768px) 100vw,
+          (max-width:1200px) 40vw,
+          40vw
+
+
+          "
         ></Image>
         <div className="draggable='false' w-[50%] flex flex-col item-center self-center">
           <AnimatedText

@@ -20,6 +20,9 @@ function Page() {
               className="w-full h-auto hover:scale-105 transition-all ease-linear duration-100"
               alt={title}
               src={image}
+              sizes="(max-width:768px) 100vw,
+              (max-width:1200px) 50vw,
+              50vw"
             ></Image>
           </Link>
 
@@ -87,6 +90,8 @@ function Page() {
               src={img}
               height={400}
               width={400}
+              laz
+              
             ></FramerImage>
           </Link>
           <span className="text-primary text-lg font-medium dark:text-primaryDark">

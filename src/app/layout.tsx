@@ -31,8 +31,6 @@ export default function RootLayout({
   document.documentElement.classList.add('dark')
 } else {
   document.documentElement.classList.remove('dark')}
-  console.log("darkMode adeed-----")
-
   `
         }</Script>
 
