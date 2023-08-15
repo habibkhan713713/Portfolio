@@ -24,8 +24,8 @@ export default function RootLayout({
       lang="en"
       className={`${fontMont.variable} ${roboto.variable} ${sanSwah.variable} ${inter.variable}`}
     >
-   <Head>
-          <script >{
+   
+          <Script id='theme-switcher' strategy='beforeInteractive'>{
             // On page load or when changing themes, best to add inline in `head` to avoid FOUC
             `if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
   document.documentElement.classList.add('dark')
@@ -33,8 +33,8 @@ export default function RootLayout({
   document.documentElement.classList.remove('dark')}
   
   `
-          }</script>
-        </Head>
+          }</Script>
+        
 
       <body className="select-none flex items-center  text-dark w-full min-h-[98vh] dark:!bg-dark  flex-col box-border">
         
