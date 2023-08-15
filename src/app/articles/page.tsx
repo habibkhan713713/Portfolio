@@ -90,7 +90,7 @@ function Page() {
               src={img}
               height={400}
               width={400}
-              laz
+              
               
             ></FramerImage>
           </Link>
