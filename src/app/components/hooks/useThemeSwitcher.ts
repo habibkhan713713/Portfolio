@@ -27,7 +27,7 @@ export default function useThemeSwitcher() {
         }
       }
     }
-    handleChange();
+    // handleChange();
     mediaQuery.addEventListener("change", handleChange);
 
     return () => mediaQuery.removeEventListener("change", handleChange);
