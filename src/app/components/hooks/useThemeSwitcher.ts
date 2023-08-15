@@ -24,6 +24,7 @@ export default function useThemeSwitcher() {
           document.documentElement.classList.add("dark");
         }
       }
+      handleChange
     }
 
     mediaQuery.addEventListener("change", handleChange);

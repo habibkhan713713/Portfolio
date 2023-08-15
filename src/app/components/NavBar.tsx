@@ -1,4 +1,5 @@
 "use client";
+import Script from "next/script";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Logo from "./Logo";
@@ -14,6 +15,7 @@ import {
   MoonIcon,
 } from "./Icons";
 import { usePathname } from "next/navigation";
+import { useEffect } from "react";
 export default function NavBar({ className }: any) {
   const CustomLink = ({ href, title, className = "" }: any) => {
     const path = usePathname();
@@ -28,9 +30,11 @@ export default function NavBar({ className }: any) {
           {title}
 
           <span
-            className={`h-[1px] inline-block bg-dark absolute left-0 -bottom-0.5 
-          group-hover:w-full ease transition-[width] duration-300   dark:bg-light
-          ${path === href ? "w-full" : "w-0"}   
+            className={`h-[1px] inline-block  absolute left-0 -bottom-0.5 
+          group-hover:w-full ease transition-[width] duration-300   
+          ${path === href ? "w-full" : "w-0"}  ${
+              mode === "" ? "bg-dark" : mode === "dark" ? "bg-light" : "bg-dark"
+            } 
           `}
           >
             &nbsp;
@@ -41,6 +45,11 @@ export default function NavBar({ className }: any) {
   };
 
   const [mode, setMode] = useThemeSwitcher();
+  useEffect(()=>{
+    if(window.localStorage.getItem("theme") === "dark"){
+      setMode("dark")
+    }
+  },[])
   return (
     <header
       className={`${className} w-full px-32 py-8 font-medium flex items-center justify-between`}
@@ -127,7 +136,7 @@ export default function NavBar({ className }: any) {
           }}
         >
           {mode === "dark" ? (
-            <SunIcon className={"fill-dark"} />
+            <SunIcon className={"fill-dark "} />
           ) : (
             <MoonIcon className={"fill-dark"} />
           )}
