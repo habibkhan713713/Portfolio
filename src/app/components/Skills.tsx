@@ -19,10 +19,10 @@ export default function Skills() {
   };
   return (
     <>
-      <h2 className="select-none font-bold text-8xl mt-16 w-full text-center">
+      <h2 className="select-none font-bold text-8xl mt-16 w-full text-center dark:text-light">
         Skills
       </h2>
-      <div className="w-full h-screen relative flex items-center justify-center rounded-full bg-circularLight
+      <div className="w-full h-screen relative flex items-center justify-center rounded-full bg-circularLight dark:bg-circularDark
       ">
        <Skill name="Web" x={0} y={0} className="!shadow-xl !shadow-yellow-600"></Skill>
       <Skill name="HTML" x={"-5vw"} y={"-4vw"} className="!bg-red-500 !shadow-xl !shadow-red-600"></Skill>

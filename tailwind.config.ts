@@ -6,6 +6,7 @@ const config: Config = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  darkMode:"class",
   theme: {
     extend: {
       fontFamily: {
@@ -16,7 +17,9 @@ const config: Config = {
       },
       boxShadow: {
         solid: "8px 8px 0px 0px rgba(0, 0, 0, 1)",
+        "solid-light" :  "8px 8px 0px 0px rgba(256, 256, 256, 1)",
         medium: "4px 4px 0px 0px rgba(0, 0, 0, 1)",
+        "medium-light": "4px 4px 0px 0px rgba(256, 256, 256, 1)",
       },
       animation: {
         "spin-slow": "spin 10s linear infinite",

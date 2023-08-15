@@ -1,13 +1,13 @@
 "use client";
 import { motion, useScroll } from "framer-motion";
-export default function Liicon({ refer, className }: any) {
+export default function Liicon({ ref, className }: any) {
   const { scrollYProgress } = useScroll({
-    target: refer,
+    target: ref,
     offset: ["center end", "center center"],
   });
 
   return (
-    <figure className={`absolute stroke-dark -left-[120px]  ${className}`}>
+    <figure className={`absolute stroke-dark dark:stroke-light -left-[120px]  ${className}`}>
       <svg
         className="-top-8 absolute "
         width="75"
@@ -15,13 +15,13 @@ export default function Liicon({ refer, className }: any) {
         viewBox="0 0 100 100"
       >
         <circle
-          className="stroke-primary fill-none stroke-1"
+          className="stroke-primary dark:stroke-primaryDark  fill-none dark:fill-light stroke-1"
           cx="75"
           cy="75"
           r="20"
         />
         <motion.circle
-          className="fill-light stroke-[5px]"
+          className="fill-light dark:fill-dark stroke-[5px]"
           cx="75"
           cy="75"
           r="20"
@@ -30,7 +30,7 @@ export default function Liicon({ refer, className }: any) {
           }}
         />
         <circle
-          className="animate-pulse fill-primary stroke-1"
+          className="animate-pulse fill-primary dark:fill-primaryDark stroke-1"
           cx="75"
           cy="75"
           r="10"

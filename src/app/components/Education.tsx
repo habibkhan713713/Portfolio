@@ -5,8 +5,8 @@ import { useRef } from "react";
 function Details({ position, company, comapnyLink, time, address, work }: any) {
      const ref = useRef(null)
     return (
-    <li ref = {ref} className="font-mono text-lg my-8 first:mt-0 last:mb-0 w-[100%] mx-auto flex  flex-col items-start justify-between">
-     <Liicon className="" refer={ref}></Liicon>
+    <li ref = {ref} className="font-mono text-lg my-8 first:mt-0 last:mb-0 w-[100%] mx-auto flex  flex-col items-start justify-between dark:text-light">
+     <Liicon className="" ref={ref}></Liicon>
       <motion.div
       initial= {{y:50}}
       whileInView={{y:0}}
@@ -16,13 +16,13 @@ function Details({ position, company, comapnyLink, time, address, work }: any) {
           {position} &nbsp;
           <a
             target="_blank"
-            className="text-primary capitalize"
+            className="text-primary capitalize dark:text-primaryDark"
             href={comapnyLink}
           >
             @ &nbsp;{company}
           </a>
         </h3>
-        <span className="capitalize font-medium text-dark/75">
+        <span className="capitalize font-medium text-dark/75 dark:text-slate-400">
           {time} | {address}
         </span>
         
@@ -47,7 +47,7 @@ export default function Experience() {
       <div className="w-[75%]  mx-auto relative">
     <motion.div
     style={{scaleY:scrollYProgress}}
-    ref={ref} className="absolute top-4 -left-16 w-[4px] h-full bg-dark origin-top"/>
+    ref={ref} className="absolute top-4 -left-16 w-[4px] h-full bg-dark origin-top dark:bg-primaryDark"/>
 
 
 

@@ -1,4 +1,6 @@
 import "./globals.css";
+import Head from "next/head";
+import Script from "next/script";
 import type { Metadata } from "next";
 import { fontMont, sanSwah, inter, roboto } from "./fonts";
 import NavBar from "./components/NavBar";
@@ -21,12 +23,27 @@ export default function RootLayout({
       lang="en"
       className={`${fontMont.variable} ${roboto.variable} ${sanSwah.variable} ${inter.variable}`}
     >
-      <body className="select-none flex items-center text-dark w-full min-h-[98vh]  flex-col box-border">
-        <NavBar className="grow-0"></NavBar>
-        <main className={`bg-light w-full grow border-box `}>{children}</main>
-        <Footer className="grow-0"></Footer>
+   <Head>
+          <script >{
+            // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+            `if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+  document.documentElement.classList.add('dark')
+} else {
+  document.documentElement.classList.remove('dark')}
+  
+  `
+          }</script>
+        </Head>
+
+      <body className="select-none flex items-center  text-dark w-full min-h-[98vh] dark:!bg-dark  flex-col box-border">
+        
+
+        <NavBar className=" grow-0 dark:bg-dark dark:text-light dark"></NavBar>
+        <main className={`bg-light w-full grow border-box dark:!bg-dark`}>
+          {children}
+        </main>
+        <Footer className="grow-0 dark:!bg-dark"></Footer>
       </body>
-    
     </html>
   );
 }
