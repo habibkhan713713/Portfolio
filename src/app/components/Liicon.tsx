@@ -7,7 +7,7 @@ export default function Liicon({ ref, className }: any) {
   });
 
   return (
-    <figure className={`absolute stroke-dark dark:stroke-light -left-[120px]  ${className}`}>
+    <figure className={`absolute stroke-dark dark:stroke-light xl:-left-[120px] md:-left-[60px] ${className}`}>
       <svg
         className="-top-8 absolute "
         width="75"

@@ -10,7 +10,9 @@ function Page() {
   const FeaturedArticle = ({ para, title, image, link, readtime }: any) => {
     return (
       <>
-        <article className="p-12 col-span-6 flex flex-col items-center justify-between rounded-3xl border border-solid border-dark bg-light shadow-solid dark:bg-dark dark:shadow-solid-light dark:border-light">
+        <article className="p-12 xl:p-6 xl:py-8 col-span-6 flex flex-col items-center justify-between rounded-3xl border border-solid border-dark bg-light shadow-solid dark:bg-dark dark:shadow-solid-light dark:border-light
+        xl:h-[30rem] lg:h-[25rem]
+        ">
           <Link
             className="w-full cursor-pointer rounded-lg overflow-hidden"
             target="_blank"
@@ -32,12 +34,12 @@ function Page() {
               target="_blank"
               href={link}
             >
-              <h3 className="capitalize my-2 w-full text-left text-3xl font-bold dark:text-light">
+              <h3 className="capitalize my-2 w-full text-left text-3xl font-bold dark:text-light xl:text-xl lg:text-base lg:my-1">
                 {title}
               </h3>{" "}
             </Link>
-            <p className="text-dark/80 text-base dark:text-slate-400">{para}</p>
-            <span className="text-primary font-medium pt-4 text-lg dark:text-primaryDark">
+            <p className="text-dark/80 text-base dark:text-slate-400 xl:text-sm lg:text-xs">{para}</p>
+            <span className="text-primary font-medium pt-4 text-lg dark:text-primaryDark xl:text-base lg:text-sm">
               {readtime}&nbsp;min read
             </span>
           </div>
@@ -54,7 +56,7 @@ function Page() {
 
     function handleMouse(event: any) {
       imgRef.current.style.display = "inline-block";
-      x.set(event.pageX - 100);
+      x.set(event.pageX - 350);
       y.set(-10);
     }
     function handleMouseLeave(event: any) {
@@ -71,13 +73,13 @@ function Page() {
             transition: { duration: 0.2, ease: "easeInOut" },
           }}
           viewport={{ once: true }}
-          className="group border shadow-medium border-dark rounded-xl  w-full flex flex-row items-center justify-between h-auto py-6 px-4 dark:border-light dark:shadow-medium-light"
+          className="group border shadow-medium border-dark rounded-xl  w-full flex flex-row items-center justify-between h-auto py-6 px-4 dark:border-light dark:shadow-medium-light lg:py-4"
         >
           <Link
             onMouseMove={handleMouse}
             onMouseLeave={handleMouseLeave}
             href={link}
-            className="relative  w-[80%] hover:underline  capitalize text-xl font-bold dark:text-light"
+            className="relative  w-[80%] hover:underline  capitalize text-xl font-bold dark:text-light xl:text-base text-clip lg:text-sm"
           >
             {title}
             <FramerImage
@@ -88,13 +90,13 @@ function Page() {
               ref={imgRef}
               alt={title}
               src={img}
-              height={400}
-              width={400}
+              height={300}
+              width={300}
               
               
             ></FramerImage>
           </Link>
-          <span className="text-primary text-lg font-medium dark:text-primaryDark">
+          <span className="text-primary text-lg font-medium dark:text-primaryDark xl:text-base lg:text-sm">
             {date}
           </span>
         </motion.article>
@@ -105,7 +107,7 @@ function Page() {
   return (
     <main className="mb-24 flex mx-32 flex-col items-center justify-between">
       <AnimatedText
-        className="text-8xl pt-16 pb-16 dark:text-light"
+        className="text-8xl pt-16 pb-16 2xl:py-8 xl:py-4 dark:text-light xl:text-[5rem] 2xl:text-[4.5rem] lg:text-6xl lg:py-1 "
         text="Words Can Change the World!"
       ></AnimatedText>
       <div className="grid gap-12 grid-flow-row grid-cols-12 items-center justify-between">
@@ -125,12 +127,12 @@ function Page() {
           title="creating stunning loading screens in react: Build 3 types of loading screens"
         ></FeaturedArticle>
       </div>
-      <div className="w-full flex flex-col pb-32 justify-center items-center pt-32 ">
-        <h1 className="text-4xl font-bold text-dark pb-16 dark:text-light">
+      <div className="w-full flex flex-col pb-32 justify-center items-center pt-32 xl:py-16 lg:pb-2">
+        <h1 className="text-4xl font-bold text-dark pb-16 dark:text-light xl:pb-8 lg:pb-4">
           All Articles
         </h1>
 
-        <div className="flex flex-col items-center justify-center pt-8">
+        <div className="flex flex-col items-center justify-center pt-8 lg:pt-2">
           <MovingImg
             title="form validation in reactjs: build a reusable custom hook for inputs and error handling"
             img={article1}

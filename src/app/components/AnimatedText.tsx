@@ -22,7 +22,7 @@ const AnimatedText = ({ className , text }: any) => {
       opacity: 1,
       y: 0,
       transition: {
-        duartion: 0.2,
+        duration: 0.2,
       },
     },
   };
@@ -33,16 +33,16 @@ const AnimatedText = ({ className , text }: any) => {
         variants={quote}
         initial="initial"
         animate="animate"
-        className={`${className} w-full inline-block text-dark font-bold capitalize text-6xl`}
+        className={` w-full  text-dark font-bold capitalize 2xl:text-6xl xl:text-2xl flex items-center justify-center flex-wrap ${className} `}
       >
         {text.split(" ").map((word: any, index: any) => {
           return (
             <motion.span
               variants={singleWord}
-              className="inline-block "
+              className={`inline-block 2xl:text-8xl xl:text-[5.4rem]  ${className} md:font-[900]`}
               key={`${word}-${index}`}
             >
-              {word}&nbsp;
+              {word}&nbsp;&nbsp;
             </motion.span>
           );
         })}

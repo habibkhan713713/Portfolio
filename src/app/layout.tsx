@@ -24,7 +24,7 @@ export default function RootLayout({
       lang="en"
       className={`${fontMont.variable} ${roboto.variable} ${sanSwah.variable} ${inter.variable}`}
     >
-      <body className="select-none flex items-center  text-dark w-full min-h-[98vh] dark:!bg-dark  flex-col box-border">
+      <body className="select-none flex items-center justify-between  text-dark w-full min-h-[98vh] dark:!bg-dark  flex-col box-border">
         <Script id="theme-switcher" strategy="beforeInteractive">{
           // On page load or when changing themes, best to add inline in `head` to avoid FOUC
           `if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
@@ -38,7 +38,7 @@ export default function RootLayout({
         <main className={`bg-light w-full grow border-box dark:!bg-dark`}>
           {children}
         </main>
-        <Footer className="grow-0 dark:!bg-dark"></Footer>
+        <Footer className="grow-0 dark:!bg-dark xl:pt-8"></Footer>
         <Analytics />
       </body>
     </html>

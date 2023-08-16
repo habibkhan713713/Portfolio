@@ -6,13 +6,13 @@ function Details({ position, company, comapnyLink, time, address, work }: any) {
      const ref = useRef(null)
     return (
     <li ref = {ref} className="font-mono text-lg my-8 first:mt-0 last:mb-0 w-[100%] mx-auto flex  flex-col items-start justify-between dark:text-light">
-     <Liicon className="" ref={ref}></Liicon>
+     <Liicon className=" md:!-left-[13px]" ref={ref}></Liicon>
       <motion.div
       initial= {{y:50}}
       whileInView={{y:0}}
       transition={{duration:0.5,type:"spring"}}
       >
-        <h3 className="w-full inline-block capitalize font-bold text-2xl">
+        <h3 className="w-full inline-block capitalize font-bold text-2xl md:text-base">
           {position} &nbsp;
           <a
             target="_blank"
@@ -22,7 +22,7 @@ function Details({ position, company, comapnyLink, time, address, work }: any) {
             @ &nbsp;{company}
           </a>
         </h3>
-        <span className="capitalize font-medium text-dark/75 dark:text-slate-400">
+        <span className="capitalize font-medium text-dark/75 dark:text-slate-400 md:text-base">
           {time} | {address}
         </span>
         
@@ -39,19 +39,19 @@ export default function Experience() {
         }
     )
   return (
-    <div className="mt-40">
-      <h1 className="font-bold text-8xl mb-32 w-full text-center">
+    <div className="mt-40 xl:mt-10">
+      <h1 className="font-bold text-8xl mb-32 w-full text-center dark:text-light xl:mb-16 xl:text-6xl md:text-4xl md:mb-12 ">
         {" "}
         Education{" "}
       </h1>
-      <div className="w-[75%]  mx-auto relative">
+      <div className="w-[95%]  mx-auto relative">
     <motion.div
     style={{scaleY:scrollYProgress}}
-    ref={ref} className="absolute top-4 -left-16 w-[4px] h-full bg-dark origin-top dark:bg-primaryDark"/>
+    ref={ref} className="absolute top-4 -left-16 w-[4px] h-full bg-dark origin-top dark:bg-primaryDark md:left-10"/>
 
 
 
-        <ul className="flex w-full flex-col items-start justify-between ml-20 mb-32">
+        <ul className="flex w-full flex-col items-start justify-between ml-20 mb-32 md:mb-0">
           <Details
             position="MATRIC "
             company="FBISE"
