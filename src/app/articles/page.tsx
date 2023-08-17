@@ -10,8 +10,8 @@ function Page() {
   const FeaturedArticle = ({ para, title, image, link, readtime }: any) => {
     return (
       <>
-        <article className="p-12 xl:p-6 xl:py-8 col-span-6 flex flex-col items-center justify-between rounded-3xl border border-solid border-dark bg-light shadow-solid dark:bg-dark dark:shadow-solid-light dark:border-light
-        xl:h-[30rem] lg:h-[25rem]
+        <article className="p-12 xl:p-6 xl:py-8 col-span-6 md:mt-6 flex flex-col items-center justify-between rounded-3xl border border-solid border-dark bg-light shadow-solid dark:bg-dark dark:shadow-solid-light dark:border-light
+        xl:h-[30rem]  lg:h-auto
         ">
           <Link
             className="w-full cursor-pointer rounded-lg overflow-hidden"
@@ -73,20 +73,20 @@ function Page() {
             transition: { duration: 0.2, ease: "easeInOut" },
           }}
           viewport={{ once: true }}
-          className="group border shadow-medium border-dark rounded-xl  w-full flex flex-row items-center justify-between h-auto py-6 px-4 dark:border-light dark:shadow-medium-light lg:py-4"
+          className="group border shadow-medium border-dark rounded-xl lg:flex-col w-full flex flex-row items-center justify-between h-auto py-6 px-4 dark:border-light dark:shadow-medium-light lg:py-4"
         >
           <Link
             onMouseMove={handleMouse}
             onMouseLeave={handleMouseLeave}
             href={link}
-            className="relative  w-[80%] hover:underline  capitalize text-xl font-bold dark:text-light xl:text-base text-clip lg:text-sm"
+            className="relative  w-[80%] hover:underline  h-auto capitalize text-xl font-bold dark:text-light xl:text-base text-clip lg:text-sm"
           >
             {title}
             <FramerImage
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1, transition: { duration: 0.5 } }}
               style={{ x: x, y: y }}
-              className="rounded-xl border border-black absolute hidden z-10 "
+              className="rounded-xl border border-black absolute hidden z-10 lg:!hidden"
               ref={imgRef}
               alt={title}
               src={img}
@@ -96,7 +96,7 @@ function Page() {
               
             ></FramerImage>
           </Link>
-          <span className="text-primary text-lg font-medium dark:text-primaryDark xl:text-base lg:text-sm">
+          <span className="text-primary text-lg font-medium dark:text-primaryDark xl:text-base lg:text-sm lg:pt-4">
             {date}
           </span>
         </motion.article>
@@ -105,12 +105,12 @@ function Page() {
   };
 
   return (
-    <main className="mb-24 flex mx-32 flex-col items-center justify-between">
+    <main className="mb-24 lg:mb-8 flex mx-32 flex-col items-center md:mx-8 justify-between">
       <AnimatedText
-        className="text-8xl pt-16 pb-16 2xl:py-8 xl:py-4 dark:text-light xl:text-[5rem] 2xl:text-[4.5rem] lg:text-6xl lg:py-1 "
+        className="text-8xl pt-16 pb-16 2xl:py-8 xl:py-4 dark:text-light xl:text-[5rem] 2xl:text-[4.5rem] lg:text-4xl  lg:py-1 "
         text="Words Can Change the World!"
       ></AnimatedText>
-      <div className="grid gap-12 grid-flow-row grid-cols-12 items-center justify-between">
+      <div className="grid gap-12 grid-flow-row grid-cols-12 items-center md:w-[93vw] md:block justify-between ">
         <FeaturedArticle
           readtime="9"
           image={article1}
@@ -132,7 +132,7 @@ function Page() {
           All Articles
         </h1>
 
-        <div className="flex flex-col items-center justify-center pt-8 lg:pt-2">
+        <div className="flex flex-col md:w-[96vw] items-center justify-center pt-8 lg:pt-2">
           <MovingImg
             title="form validation in reactjs: build a reusable custom hook for inputs and error handling"
             img={article1}

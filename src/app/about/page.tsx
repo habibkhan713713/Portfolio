@@ -14,8 +14,8 @@ function Page() {
         text="Passion Fuels Purpose!"
         className="pt-20  !text-8xl mb-16 dark:text-light 2xl:mb-8 2xl:pt-6 xl:pt-4 xl:mb-4 xl:text-6xl lg:!text-6xl lg:mx-8 md:mx-2 md:!text-4xl md:pt-1"
       ></AnimatedText>
-      <div className="w-full grid grid-cols-8 gap-8">
-        <div className="col-span-8 flex flex-col items-start justify-start md:order-2">
+      <div className="w-full grid grid-cols-8 gap-8 ">
+        <div className="col-span-8 flex flex-col items-start xl:justify-between md:order-2 3xl:col-span-4 2xl:col-span-4 xl:col-span lg:col-span-4 md:col-span-8">
           <h2 className="mb-4 text-lg font-bold uppercase opacity-75 text-dark dark:text-slate-400 xl:text-base md:text-center w-[100%]">
             Biography
           </h2>
@@ -31,7 +31,7 @@ function Page() {
             pretty – it&apos;s about solving problems and creating intuitive,
             enjoyable experiences for users.
           </p>
-          <p className="font-medium font-mono dark:text-light xl:text-sm lg:hidden md:inline-block md:font-bold">
+          <p className="font-medium font-mono dark:text-light xl:text-sm lg:hidden  md:inline-block md:font-bold">
             Whether I&apos;m working on a website, mobile app, or other digital
             product, I bring my commitment to design excellence and
             user-centered thinking to every project I work on. I look forward to
@@ -42,11 +42,11 @@ function Page() {
         
         <div
           className="shadow-solid col-span-3 relative h-max border-2 border-solid rounded-2xl border-black 
-    bg-light p-8 dark:bg-dark dark:border-light dark:shadow-solid-light xl:p-6 md:col-span-8 box-border "
+    bg-light p-8 dark:bg-dark dark:border-light dark:shadow-solid-light xl:p-6 md:col-span-8 box-border 3xl:col-span-4 2xl:col-span-4 xl:col-span lg:col-span-4"
         >
           <Image
             draggable="false"
-            className="bg-dark dark:bg-black rounded-2xl md:order-1"
+            className="bg-dark dark:bg-black rounded-2xl md:order-1 xl:order-10"
             alt="Habibullah Khan"
             src={profile}
             priority

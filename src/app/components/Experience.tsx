@@ -12,7 +12,7 @@ function Details({ position, company, comapnyLink, time, address, work }: any) {
       whileInView={{y:0}}
       transition={{duration:0.5,type:"spring"}}
       >
-        <h3 className="capitalize font-bold md:text-lg md:!font-extrabold">
+        <h3 className="capitalize font-bold  md:!font-extrabold 2xl:text-2xl md:!text-xl">
           {position} &nbsp;
           <a
             target="_blank"

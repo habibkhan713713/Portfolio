@@ -13,7 +13,7 @@ export default function page({ className }: any) {
         <Image
           draggable="false"
           alt="profile image"
-          className="w-[80%] lg:hidden h-auto md:w-[100%] md:inline-block border border-1 border-light rounded-lg"
+          className="w-[80%] lg:hidden h-auto md:w-[100%] md:inline-block border md:border-1 2xl:border-0 border-light rounded-lg"
           src={Profile}
           priority
           sizes="

@@ -16,14 +16,14 @@ function Page() {
   }: any) => {
     return (
       <>
-        <article className=" dark:bg-dark dark:text-light p-12 xl:px-6  w-full flex items-center justify-between rounded-3xl border border-solid border-dark bg-light dark:border-light shadow-solid-light">
+        <article className=" dark:bg-dark dark:text-light p-12 xl:px-6 md:w-[93%] md:px-auto md:px-0 box-border md:py-[0.5rem] w-full flex items-center justify-between rounded-3xl md:flex-col md:flex-start border border-solid border-dark bg-light dark:border-light shadow-solid-light">
           <Link
-            className="w-1/2 cursor-pointer rounded-lg overflow-hidden"
+            className=" cursor-pointer rounded-lg overflow-hidden "
             target="_blank"
             href={link}
           >
             <Image
-              className="hover:scale-105 transition-all ease-linear duration-100 w-full h-auto"
+              className="hover:scale-105 transition-all ease-linear duration-100  w-[98%] mx-auto h-auto"
               alt={title}
               src={img}
               priority
@@ -37,7 +37,7 @@ function Page() {
             ></Image>
           </Link>
 
-          <div className="w-1/2 flex flex-col items-start justify-between pl-6 ">
+          <div className="w-full xl:w-[60%] lg:w-[100%] md:pl-16 flex flex-col items-start justify-between pl-6 ">
             <span className="text-primary dark:text-primaryDark font-medium text-xl xl:text-lg lg:text-base">
               {type}
             </span>
@@ -75,8 +75,8 @@ function Page() {
   const Project = ({ type, title, img, link, github }: any) => {
     return (
       <>
-        <article className="p-12 w-full flex flex-col items-center justify-between rounded-3xl  border border-solid border-dark bg-light dark:bg-dark shadow-solid dark:shadow-solid-light dark:border-light
-        xl:p-6 xl:py-8
+        <article className="p-12 w-full flex flex-col items-center md:w-[91%] justify-between rounded-3xl  border border-solid border-dark bg-light dark:bg-dark shadow-solid dark:shadow-solid-light dark:border-light
+        xl:p-6 xl:py-8 
         ">
           <Link
             className="w-full cursor-pointer rounded-lg overflow-hidden"
@@ -127,13 +127,13 @@ function Page() {
   };
 
   return (
-    <main className="px-32 pb-16">
+    <main className="px-32 pb-16 xl:px-16 md:px-2">
       <AnimatedText
         text="Imagination Trumps Knowledge!"
-        className="text-8xl 2xl:text-4xl dark:text-light xl:px-0 xl:text-[4rem] lg:text-6xl lg:mt-4"
+        className="text-8xl 2xl:text-4xl dark:text-light xl:px-0 xl:text-[4rem] lg:text-6xl lg:mt-4 xs:text-4xl"
       ></AnimatedText>
-      <div className="mt-16 grid grid-cols-12 gap-24 xl:gap-12">
-        <div className="col-span-12">
+      <div className="mt-16 md:mt-6 grid grid-cols-12 gap-24 xl:gap-12 box-border md:w-[100vw] md:block">
+        <div className="xl:col-span-12 3xl:col-span-12 2xl:col-span-12 lg:col-span-12  md:mt-4">
           <FeaturedProject
             title="Portfolio Site"
             link={""}
@@ -143,7 +143,7 @@ function Page() {
             github=""
           ></FeaturedProject>
         </div>
-        <div className="col-span-6">
+        <div className="3xl:col-span-6 2xl:col-span-6 xl:col-span-6 lg:col-span-6 md:w-[100vw] md:mt-8">
           <Project
             img={Project2}
             link=""
@@ -153,7 +153,7 @@ function Page() {
           ></Project>
         </div>
 
-        <div className="col-span-6">
+        <div className="3xl:col-span-6 2xl:col-span-6 xl:col-span-6 lg:col-span-6 md:w-[100vw] md:mt-8">
           <Project
             img={Project3}
             link=""
