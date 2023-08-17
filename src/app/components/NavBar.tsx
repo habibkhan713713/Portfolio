@@ -60,9 +60,9 @@ export default function NavBar({ className }: any) {
       className={`${className} w-full px-32 py-8 font-medium flex items-center justify-between xl:px-16 relative`}
     >
       <button className="3xl:hidden 2xl:hidden lg:flex flex-col justify-center items-center" onClick={handleOpen}>
-        <span className={`bg-dark dark:!bg-red-400 block h-0.5 w-6 rounded-sm -translate-y-0.5 ${isOpen ? "rotate-45 translate-y-2 ":"" } ease-in-out duration-300 transition-all`}></span>
-        <span className={`bg-dark dark:!bg-red-400 block h-0.5 w-6 rounded-sm my-0.5 ${isOpen ? "opacity-0" : "opacity-100"} ease-in-out duration-500 transition-all`}></span>
-        <span className={`bg-dark dark:!bg-red-400 block h-0.5 w-6 rounded-sm translate-y-0.5 ${isOpen ? "-rotate-45 -translate-y-1":""} ease-in-out duration-300 `}></span>
+        <span className={`bg-dark dark:!bg-slate-500 block h-0.5 w-6 rounded-sm -translate-y-0.5 ${isOpen ? "rotate-45 translate-y-2 ":"" } ease-in-out duration-300 transition-all`}></span>
+        <span className={`bg-dark dark:!bg-slate-500 block h-0.5 w-6 rounded-sm my-0.5 ${isOpen ? "opacity-0" : "opacity-100"} ease-in-out duration-500 transition-all`}></span>
+        <span className={`bg-dark dark:!bg-slate-500 block h-0.5 w-6 rounded-sm translate-y-0.5 ${isOpen ? "-rotate-45 -translate-y-1":""} ease-in-out duration-300 `}></span>
       </button>
      <div className={`xl:hidden 2xl:hidden 3xl:hidden lg:block  absolute  z-50 top-[100%] md:left-[2vw]  ${isOpen?"lg:block":"lg:hidden"}
      
