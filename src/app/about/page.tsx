@@ -10,6 +10,7 @@ import Education from "../components/Education";
 function Page() {
   return (
     <main className="flex w-full px-32 xl:px-16 flex-col mb-32 items-center justify-center md:px-4">
+    
       <AnimatedText
         text="Passion Fuels Purpose!"
         className="pt-20  !text-8xl mb-16 dark:text-light 2xl:mb-8 2xl:pt-6 xl:pt-4 xl:mb-4 xl:text-6xl lg:!text-6xl lg:mx-8 md:mx-2 md:!text-4xl md:pt-1"

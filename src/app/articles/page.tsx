@@ -6,6 +6,7 @@ import article1 from "../../../public/images/Articles/article1.webp";
 import AnimatedText from "../components/AnimatedText";
 import { motion, useMotionValue } from "framer-motion";
 import { useRef } from "react";
+
 function Page() {
   const FeaturedArticle = ({ para, title, image, link, readtime }: any) => {
     return (
@@ -106,6 +107,7 @@ function Page() {
 
   return (
     <main className="mb-24 lg:mb-8 flex mx-32 flex-col items-center md:mx-8 justify-between">
+     
       <AnimatedText
         className="text-8xl pt-16 pb-16 2xl:py-8 xl:py-4 dark:text-light xl:text-[5rem] 2xl:text-[4.5rem] lg:text-4xl  lg:py-1 "
         text="Words Can Change the World!"

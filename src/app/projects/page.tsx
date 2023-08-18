@@ -5,6 +5,7 @@ import { GithubIcon } from "../components/Icons";
 import Project1 from "../../../public/images/Projects/Project1.webp";
 import Project2 from "../../../public/images/Projects/Project2.webp";
 import Project3 from "../../../public/images/Projects/Project3.webp";
+
 function Page() {
   const FeaturedProject = ({
     type,
@@ -128,6 +129,7 @@ function Page() {
 
   return (
     <main className="px-32 pb-16 xl:px-16 md:px-2">
+   
       <AnimatedText
         text="Imagination Trumps Knowledge!"
         className="text-8xl 2xl:text-4xl dark:text-light xl:px-0 xl:text-[4rem] lg:text-6xl lg:mt-4 xs:text-4xl"
