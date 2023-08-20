@@ -62,3 +62,13 @@ export default function page({ className }: any) {
     </>
   );
 }
+export const metadata = {
+  generator: 'Next.js',
+  applicationName: 'Portfolio Habibullah khan',
+  title : "Habibullah Khan || Homepage",
+  referrer: 'origin-when-cross-origin',
+  keywords: ['Next.js', 'React',"Portfolio","Next","Habibullah Khan", 'JavaScript',"Web DEveloper","Web"],
+  authors: [{ name: 'Habibullah Khan' }],
+  creator: 'Habibullah Khan',
+  publisher: 'Habibullah Khan',
+}

@@ -169,8 +169,15 @@ function Page() {
   );
 }
 
-export default Page;
 
+export default Page;
 export const metadata = {
   title: "Habibullah Khan || Projects",
-};
+  generator: 'Next.js',
+  applicationName: 'Habibullah Khan Portfolio',
+  referrer: 'origin-when-cross-origin',
+  keywords: ['Next.js', 'React',"Portfolio","Next","Habibullah Khan", 'JavaScript',"Web DEveloper","Web"],
+  authors: [{ name: 'Habibullah Khan' }],
+  creator: 'Habibullah Khan',
+  publisher: 'Habibullah Khan',
+}
