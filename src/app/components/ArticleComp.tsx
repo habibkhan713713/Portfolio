@@ -89,7 +89,7 @@ export const MovingImg = ({ title, img, link, date }: any) => {
           transition: { duration: 0.2, ease: "easeInOut" },
         }}
         viewport={{ once: true }}
-        className="group border shadow-medium border-dark rounded-xl lg:flex-col w-full flex flex-row items-center justify-between h-auto py-6 px-4 dark:border-light dark:shadow-medium-light lg:py-4"
+        className="mt-4 group border shadow-medium border-dark rounded-xl lg:flex-col w-full flex flex-row items-center justify-between h-auto py-6 px-4 dark:border-light dark:shadow-medium-light lg:py-4"
       >
         <Link
           onMouseMove={handleMouse}

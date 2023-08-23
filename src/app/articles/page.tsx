@@ -12,7 +12,8 @@ async function getData() {
     publishedAt,
     title,
     "slug":slug.current ,
-    "mainImage":mainImage.asset->url    
+    "mainImage":mainImage.asset->url,
+    heading    
   
     }`)
 
@@ -22,7 +23,7 @@ async function getData() {
 
 async function Page() {
  const data = await getData();
- 
+
 
   return (
     <main className="mb-24 lg:mb-8 flex mx-32 flex-col items-center md:mx-8 justify-between">
