@@ -57,7 +57,7 @@ async function Page() {
           {data &&
             data.map((post:any)=>{return(
               <MovingImg key={post.slug}
-            title={post.title}
+            title={post.heading}
             img={post.mainImage}
             link={post.slug}
             date={post.publishedAt}
