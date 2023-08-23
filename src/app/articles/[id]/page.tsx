@@ -34,7 +34,7 @@ export default async function page(props: any) {
 
   return (
     <div className="text-dark dark:text-light w-[100%] 3xl:px-32 2xl:px-32 sm:px-8 xs:px-4 lg:px-16 pt-16 sm:pt-8 flex flex-col items-start justify-between">
-      <h1 className="text-4xl font-bold mb-8 xs:text-2xl">{post.title}</h1>
+      <h1 className="text-4xl font-bold mb-8 xs:text-2xl">{post.heading}</h1>
 
       <div className="flex flex-row items-center justify-between md:items-start md:ml-4 w-[90%] 2xl:w-[90%] 3xl:w-[90%] md:w-full md:flex-col">
         <div className="flex flex-row justify-center items-center">
