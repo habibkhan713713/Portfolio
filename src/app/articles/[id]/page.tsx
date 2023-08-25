@@ -17,7 +17,8 @@ export default async function page(props: any) {
           "mainImage": mainImage.asset->url,
           keywords,
           description,
-          body
+          body,
+          heading
         }
       `;
     const params = { slug }; // Pass the slug as a parameter
